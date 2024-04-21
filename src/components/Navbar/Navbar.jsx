@@ -1,6 +1,6 @@
 import logo from "../../assets/logo.png";
-import { CiSearch } from "react-icons/ci";
-
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import DarkMode from "./DarkMode";
 function Navbar() {
   return (
     <>
@@ -22,8 +22,8 @@ function Navbar() {
               </a>
             </div>
             {/* Search Bar and other button */}
-            <div>
-              <div className="relative group   sm:block">
+            <div className="flex justify-between items-center gap-4">
+              <div className="relative group hidden sm:block">
                 <input
                   type="text"
                   className="w-[200px]
@@ -33,11 +33,32 @@ function Navbar() {
             focus:outline-none focus:border-1
             focus:border-primary"
                 />
-                <CiSearch
+                <FaSearch
                   className="text-gray-500 group-hover:text-primary 
                 absolute top-1/2 -translate-y-1/2 right-3"
                 />
               </div>
+            </div>
+            <button
+              onClick={() => alert("order now")}
+              className="bg-gradient-to-r from-primary to-secondary 
+              transition-all duration-200 text-white py-1 px-4 
+              rounded-full flex items-center gap-3 group"
+            >
+              <span
+                className="group-hover:block hidden transition-all
+              duration-200"
+              >
+                Order
+              </span>
+              <FaShoppingCart
+                className="text-xl text-white drop-shadow-sm
+              cursor-pointer"
+              />
+            </button>
+            <div className="">
+              {/* Dark switch */}
+              <DarkMode />
             </div>
           </div>
         </div>
