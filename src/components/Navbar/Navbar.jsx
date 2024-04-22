@@ -53,8 +53,9 @@ function Navbar() {
     <>
       <div
         className="shadow-md bg-white 
-       dark:text-white 
-       duration-200 relative z-40"
+        dark:bg-gray-900
+       dark:text-white duration-200 
+       relative z-40"
       >
         {/* Upper Navbar */}
         <div className="bg-primary/40 py-2">
